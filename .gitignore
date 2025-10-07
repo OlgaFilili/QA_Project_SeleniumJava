@@ -26,3 +26,7 @@ out/
 .DS_Store
 Thumbs.db
 *.bak
+
+# unrelated folders
+.src/main/java/com
+.src/test/java/com
