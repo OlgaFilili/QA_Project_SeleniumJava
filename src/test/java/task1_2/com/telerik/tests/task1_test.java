@@ -14,26 +14,21 @@ public class task1_test extends BaseTest {
         String ExpectedColor= "rgb(255, 99, 88)";
         dialogsPage.clickOpendialogButton();
 
-        Assert.assertEquals(dialogsPage.getTitle(), ExpectedTitle,
+        Assert.assertEquals(dialogsPage.getDialogTitle(), ExpectedTitle,
                 "\n Actual & Expected Titles Do Not Match \n");
-        Assert.assertEquals(dialogsPage.getText(), ExpectedMessage,
+        Assert.assertEquals(dialogsPage.getDialogText(), ExpectedMessage,
                 "\n Actual & Expected Messages Do Not Match \n");
-        Assert.assertTrue(dialogsPage.opendialogNoButtonIsDisplayed(),
+        Assert.assertTrue(dialogsPage.dialogNoButtonIsDisplayed(),
                 "\n There is No Button 'No' in Open Dialog \n");
-        Assert.assertTrue(dialogsPage.opendialogYesButtonIsDisplayed(),
+        Assert.assertTrue(dialogsPage.dialogYesButtonIsDisplayed(),
                 "\n There is No Button 'Yes' in Open Dialog \n");
-        Assert.assertEquals(dialogsPage.ColorVerify(), ExpectedColor,
+        Assert.assertEquals(dialogsPage.colorVerify(), ExpectedColor,
                 "\n Actual & Expected Colors of YesButton Do Not Match \n");
 
-        dialogsPage.pressCloseButton();
-        dialogsPage.returnToMainPage();
+        dialogsPage.closeDialogByKeyboard();
+        dialogsPage.returnToMainPageFromDialog();
 
-        Assert.assertTrue(dialogsPage.isMainElementVisible(),
-                "\n Modal dialog Not Closed Properly \n");
-
-
-
-
-
+        Assert.assertTrue(dialogsPage.mainElementIsDisplayed(),
+                "\n Modal dialog Was Not Closed Properly \n");
     }
 }
