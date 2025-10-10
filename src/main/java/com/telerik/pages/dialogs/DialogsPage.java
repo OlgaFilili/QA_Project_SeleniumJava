@@ -60,8 +60,8 @@ public class DialogsPage extends BasePage {
         act.sendKeys(Keys.chord(Keys.TAB, Keys.ENTER)).perform();
     }
     public void returnToMainPageFromDialog(){
-        waitUntilInvisible(driver, dialogTitle, 5);
-        waitUntilVisible(driver, opendialogButton, 5);
+        waitUntilInvisible(driver, dialogTitle);
+        waitUntilVisible(driver, opendialogButton);
     }
 
 
@@ -93,8 +93,8 @@ public class DialogsPage extends BasePage {
         click(closeWindowButton);
     }
     public void returnToMainPageFromWindow(){
-        waitUntilInvisible(driver, windowTitle, 5);
-        waitUntilVisible(driver, opendialogButton, 5);
+        waitUntilInvisible(driver, windowTitle);
+        waitUntilVisible(driver, opendialogButton);
     }
 
 }
