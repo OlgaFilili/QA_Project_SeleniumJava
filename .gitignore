@@ -1,4 +1,6 @@
 target/
+# Folder for Exported files
+downloads/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -30,3 +32,4 @@ Thumbs.db
 # unrelated folders
 .src/main/java/com
 .src/test/java/com
+
