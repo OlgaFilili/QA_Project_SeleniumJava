@@ -1,6 +1,5 @@
 package task1_2.com.telerik.tests;
 
-import org.openqa.selenium.support.Color;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import task1_2.com.telerik.base.BaseTest;
